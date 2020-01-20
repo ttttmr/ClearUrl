@@ -1,0 +1,38 @@
+"www\\.douban\\.com":
+  ".*":
+    query:
+      - source
+      - dt_dapp
+      - dt_platform
+    fragment: false
+
+"twitter\\.com":
+  ".*":
+    query:
+      - s
+    fragment: false
+
+".*":
+  ".*":
+    query:
+      - fbclid
+      - gclid
+      - igshid
+      - _hsenc
+      - _hsmi
+      - ICID
+      - mc_cid
+      - mc_eid
+      - mkt_tok
+      - utm_source
+      - utm_medium
+      - utm_term
+      - utm_campaign
+      - utm_content
+      - utm_cid
+      - utm_reader
+      - utm_referrer
+      - utm_name
+      - utm_social
+      - utm_social-type
+    fragment: true
