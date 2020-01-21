@@ -12,7 +12,7 @@ host: regex match host
     query: # remove query list
       - xxx
       - xxx
-    fragment: false # keep fragment
+    fragment: true/false # keep fragment or not
 ```
 
 Example

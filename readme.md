@@ -14,7 +14,7 @@ host: # 正则匹配host
     query: # 需要删除的列表
       - xxx
       - xxx
-    fragment: false # 是否保留fragment
+    fragment: true/false # 是否保留fragment
 ```
 
 例子
