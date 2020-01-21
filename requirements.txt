@@ -1,0 +1,11 @@
+attrs==19.3.0
+certifi==2019.11.28
+more-itertools==8.1.0
+packaging==20.0
+pluggy==0.13.1
+py==1.8.1
+pyparsing==2.4.6
+pytest==5.3.4
+PyYAML==5.2
+six==1.14.0
+wcwidth==0.1.8
