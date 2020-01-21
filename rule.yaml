@@ -1,4 +1,4 @@
-"www\\.douban\\.com":
+"(www|movie)\\.douban\\.com":
   ".*":
     query:
       - source
@@ -10,6 +10,15 @@
   ".*":
     query:
       - s
+    fragment: false
+
+"(m|www)\\.bilibili\\.com":
+  ".*":
+    query:
+      - share_source
+      - share_medium
+      - bbid
+      - ts
     fragment: false
 
 ".*":
