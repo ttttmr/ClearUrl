@@ -32,6 +32,8 @@ https://github.com/jparise/chrome-utm-stripper
 
 [分享更清爽的链接，可以试试这个 Android 小工具：清净分享 | App+1](https://sspai.com/post/45317)
 
-[去除淘宝链接 SPM (Beta)](https://greasyfork.org/zh-CN/scripts/373176-%E5%8E%BB%E9%99%A4%E6%B7%98%E5%AE%9D%E9%93%BE%E6%8E%A5-spm-beta)
+[ClearURLs – 自动删除 URL 中跟踪字段[Chrome/Firefox]](https://www.appinn.com/clearurls-for-chrome-and-firefox/)
 
-[链接精简](https://greasyfork.org/zh-CN/scripts/29788-%E9%93%BE%E6%8E%A5%E7%B2%BE%E7%AE%80/code)
+[【小书签】链接地址强力净化:sparkling_heart:与油猴脚本同步更新](https://meta.appinn.net/t/topic/3130)
+
+[[Chrome/Firefox 扩展] Neat URL - 净化链接无用参数](https://meta.appinn.net/t/topic/6690)
