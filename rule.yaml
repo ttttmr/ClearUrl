@@ -12,6 +12,12 @@
       - s
     fragment: false
 
+"t\\.co":
+  ".*":
+    query:
+      - ssr
+    fragment: false
+
 "(m|www)\\.bilibili\\.com":
   ".*":
     query:
