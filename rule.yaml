@@ -1,9 +1,12 @@
-"(www|movie)\\.douban\\.com":
+"(www|movie|m)\\.douban\\.com":
   ".*":
     query:
       - source
       - dt_dapp
       - dt_platform
+      - bid
+      - from
+      - isappinstalled
     fragment: false
 
 "twitter\\.com":
