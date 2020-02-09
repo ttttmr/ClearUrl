@@ -4,28 +4,12 @@
 
 删除URL中的跟踪参数
 
-`python3 main.py https://xxxxx`
+```python3
+from clearurl import Filter
 
-# Rule
-
-```
-host: # 正则匹配host
-  path: # 正则匹配path
-    query: # 需要删除的列表
-      - xxx
-      - xxx
-    fragment: true/false # 是否保留fragment
-```
-
-例子
-
-```
-"www\\.douban\\.com":
-  ".*":
-    query:
-      - source
-      - dt_dapp
-    fragment: false
+filter = Filter()
+filter.filter_url("http://xxxx?source=github")
+>>> http://xxxx
 ```
 
 # More

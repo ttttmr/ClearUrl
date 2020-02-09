@@ -1,5 +1,5 @@
-"(www|movie|m)\\.douban\\.com":
-  ".*":
+hosts:
+  "www.douban.com": &douban
     query:
       - source
       - dt_dapp
@@ -9,20 +9,21 @@
       - isappinstalled
     fragment: false
 
-"twitter\\.com":
-  ".*":
+  "m.douban.com": *douban
+
+  "moive.douban.com": *douban
+
+  "twitter.com":
     query:
       - s
     fragment: false
 
-"t\\.co":
-  ".*":
+  "t.co":
     query:
       - ssr
     fragment: false
 
-"(m|www)\\.bilibili\\.com":
-  ".*":
+  "www.bilibili.com": &bilibili
     query:
       - share_source
       - share_medium
@@ -30,27 +31,28 @@
       - ts
     fragment: false
 
-".*":
-  ".*":
-    query:
-      - fbclid
-      - gclid
-      - igshid
-      - _hsenc
-      - _hsmi
-      - ICID
-      - mc_cid
-      - mc_eid
-      - mkt_tok
-      - utm_source
-      - utm_medium
-      - utm_term
-      - utm_campaign
-      - utm_content
-      - utm_cid
-      - utm_reader
-      - utm_referrer
-      - utm_name
-      - utm_social
-      - utm_social-type
-    fragment: true
+  "m.bilibili.com": *bilibili
+
+sets:
+  google-analytics: &google-analytics
+    - fbclid
+    - gclid
+    - igshid
+    - _hsenc
+    - _hsmi
+    - ICID
+    - mc_cid
+    - mc_eid
+    - mkt_tok
+    - utm_source
+    - utm_medium
+    - utm_term
+    - utm_campaign
+    - utm_content
+    - utm_cid
+    - utm_reader
+    - utm_referrer
+    - utm_name
+    - utm_social
+    - utm_social-type
+default: *google-analytics

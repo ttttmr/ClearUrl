@@ -2,11 +2,12 @@
 # coding=UTF-8
 
 import sys
-from filter import filter_url
+from clearurl import Filter
 
 def main():
+    filter = Filter()
     if len(sys.argv) == 2:
-        print(filter_url(sys.argv[1]))
+        print(filter.filter_url(sys.argv[1], mode = "rule"))
     else:
         print("./main.py http://xxx")
 
