@@ -1,7 +1,5 @@
 # Clear Url
 
-[en](./readme_en.md)
-
 删除URL中的跟踪参数
 
 ```python3
