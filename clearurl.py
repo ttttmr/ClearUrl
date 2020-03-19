@@ -21,12 +21,12 @@ class Url(object):
         self.fragment = None
         self.query_dict = None
         if url:
-            self.url = url
+            self.original_url = url
             self.parse_url()
             self.parse_query()
 
     def parse_url(self):
-        u = urlparse(self.url)
+        u = urlparse(self.original_url)
         self.scheme = u.scheme
         self.netloc = u.netloc
         self.host = u.hostname
@@ -84,9 +84,12 @@ class Filter(object):
             self.filter_by_rule()
         elif mode == "auto":
             self.filter_auto()
-        else:
+        elif mode == "full":
             self.filter_by_rule()
             self.filter_auto()
+        else:
+            if not self.filter_by_rule():
+                self.filter_auto()
         return self.url.get_url()
 
     def filter_by_rule(self):
@@ -111,6 +114,10 @@ class Filter(object):
                 self.url.query_dict.pop(k)
         if not keep_fragment:
             self.url.fragment = None
+        if self.url.get_url() == self.url.original_url:
+            return False
+        else:
+            return True
 
     def filter_auto(self):
         content = utils.get_url_content(self.url.get_url())
@@ -133,3 +140,7 @@ class Filter(object):
             self.add_to_rule(self.url.host, remove_list)
             self.save_rule()
             self.reload_rule()
+        if self.url.get_url() == self.url.original_url:
+            return False
+        else:
+            return True
