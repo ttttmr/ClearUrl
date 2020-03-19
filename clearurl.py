@@ -8,8 +8,7 @@ import json
 import requests
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
-import utils
-
+from . import utils
 
 class Url(object):
     def __init__(self, url=None):
