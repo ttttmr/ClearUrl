@@ -8,7 +8,6 @@ import json
 import requests
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
-from . import utils
 
 class Url(object):
     def __init__(self, url=None):
@@ -120,7 +119,7 @@ class Filter(object):
             return True
 
     def filter_auto(self):
-        content = utils.get_url_content(self.url.get_url())
+        content = get_url_content(self.url.get_url())
         differ = SequenceMatcher()
         differ.set_seq1(content)
         # 依次删掉不必要的 query
@@ -130,13 +129,13 @@ class Filter(object):
             select_query_dict.pop(k)
             select_url = self.url.copy()
             select_url.query_dict = select_query_dict
-            select_content = utils.get_url_content(select_url.get_url())
+            select_content = get_url_content(select_url.get_url())
             differ.set_seq2(select_content)
             if differ.ratio() > 0.5:
                 remove_list.append(k)
         for k in remove_list:
             self.url.query_dict.pop(k)
-        if self.study:
+        if self.study and remove_list:
             self.add_to_rule(self.url.host, remove_list)
             self.save_rule()
             self.reload_rule()
@@ -144,3 +143,8 @@ class Filter(object):
             return False
         else:
             return True
+
+def get_url_content(url):
+    # article = Article(url)
+    resp = requests.get(url)
+    return resp.content

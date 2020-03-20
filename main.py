@@ -2,7 +2,7 @@
 # coding=UTF-8
 
 import sys
-from .clearurl import Filter
+from clearurl import Filter
 
 def main():
     filter = Filter()

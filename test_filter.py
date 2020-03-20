@@ -1,4 +1,4 @@
-from .clearurl import Filter
+from clearurl import Filter
 
 filter = Filter()
 def test_filter_url():
