@@ -10,4 +10,4 @@ PySocks==1.7.1
 PyYAML==5.4
 requests==2.23.0
 six==1.14.0
-urllib3==1.25.8
+urllib3==1.26.5
