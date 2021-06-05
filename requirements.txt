@@ -8,6 +8,6 @@ pycparser==2.20
 pyOpenSSL==19.1.0
 PySocks==1.7.1
 PyYAML==5.4
-requests==2.23.0
+requests==2.25.1
 six==1.14.0
-urllib3==1.25.8
+urllib3==1.26.5
