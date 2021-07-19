@@ -10,6 +10,13 @@ filter.filter_url("http://xxxx?source=github")
 >>> http://xxxx
 ```
 
+# demo
+
+```
+> curl "https://quiet-wave-55460.herokuapp.com/clear?url=https://tmr.js.org/p/cf9279f8/?referer=test"
+{"data":"https://tmr.js.org/p/cf9279f8/"}
+```
+
 # More
 
 https://github.com/jparise/chrome-utm-stripper
